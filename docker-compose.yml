@@ -1,0 +1,12 @@
+version: '3'
+services:
+  react-app:
+    build: .
+    image: 4cadf6d8a971
+    ports:
+      - "5000:80"
+    volumes:
+      - "./:/react-app"
+      - "/react-app/node_modules"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
